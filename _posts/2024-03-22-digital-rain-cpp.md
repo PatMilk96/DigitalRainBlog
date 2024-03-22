@@ -14,7 +14,8 @@ In this blog I will describe my thought process behind creating my digital rain,
 I started with the basics... By playing The Matrix digital rain on YouTube at 0.25 speed. I must have spent a solid 10 minutes studying it, watching each droplet fall, and figuring out how it works. What I noticed is that a character is printed on the screen and then another new one just in front of it and so on. The droplets had a set size with the tail end slowly fading away. The droplets were also falling at different speeds. I focused on these characteristics of the droplet.
 
 I kept it very simple at the beginning by creating a simple algorithm in my main.cpp file. This algorithm seen below creates a vector of characters and prints them out 1 by 1 on the screen, when it prints the whole vector it starts "removing" (just placing an empty character) at the tail end of the vector seen on the screen, it then goes to back to the beginning of the vector and starts printing the characters again.
-It's a very simple algorithm and I based the whole project on that simple idea
+It's a very simple algorithm and I based the whole project on that simple idea.
+
 <img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/OriginalAlgorithm.png" width="500" height="500">
 
 
