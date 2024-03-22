@@ -15,6 +15,7 @@ I started with the basics... By playing The Matrix digital rain on YouTube at 0.
 
 I kept it very simple at the beginning by creating a simple algorithm in my main.cpp file. This algorithm seen below creates a vector of characters and prints them out 1 by 1 on the screen, when it prints the whole vector it starts "removing" (just placing an empty character) at the tail end of the vector seen on the screen, it then goes to back to the beginning of the vector and starts printing the characters again.
 It's a very simple algorithm and I based the whole project on that simple idea.
+
 *note: the GoToXY() function simply goes to a position on the screen given the X and Y coordinate*
 
 <img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/OriginalAlgorithm.png" width="350" height="350">
