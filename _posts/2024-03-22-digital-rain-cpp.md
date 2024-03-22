@@ -23,7 +23,7 @@ It's a very simple algorithm and I based the whole project on that simple idea.
 
 *note: the GoToXY() function simply goes to a position on the screen given the X and Y coordinate*
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/OriginalAlgorithm.jpg" width="450" height="350">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/OriginalAlgorithm.jpg" width="450" height="400">
 
 ## Project Overview
 
