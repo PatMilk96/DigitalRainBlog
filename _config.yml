@@ -1,0 +1,9 @@
+# Site settings
+title: Digial Rain Modern C++ Project Blog
+author:
+  name: Michelle Lynch
+  email: your-email@domain.com
+description: "A blog."
+
+# Build settings
+remote_theme: jekyll/minima
