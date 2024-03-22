@@ -34,15 +34,21 @@ The project consists of 3 files:
 - DigitalRain.h
 
 **main.cpp**
+
 In my main.cpp file I initialize a vector of droplets and put them in an infinite loop, iterating through each droplet.
 
 
 **DigitalRain.cpp**
-This is the file where all the magic happens. Here I initialize my default Rain object along with any getters and setters, and my custom functions. 
+
+This is the file where all the magic happens. Here I initialize my default Rain object along with any setters, and my custom functions. 
 
 
 **DigitalRain.h**
 
+In this file I provide all my public function definitions, and private variables
+
+
+To give an overview of how my code works without diving into too much detail... Each one of my Rain objects hold a vector of characters, same as can be seen in The Original Algorithm described at the start of the Blog. Keep in mind that the cursor on the concole window 
 
 
 
