@@ -45,7 +45,7 @@ In my main.cpp file I initialize a vector of droplets and put them in an infinit
 **DigitalRain.cpp**
 
 This is the file where all the magic happens. Here I initialize my default Rain object along with any setters, and my custom functions.
-The key functions here are the *GoToXY()* which allows me to go to a certain X and Y coordinate on the screen to print a character in that exact position *SetSpeed()* function that finds how many objects are being initialized for the current window size and sets the appropriate speed, *GenerateRandomChars()* that uses a rand() function to generate a vector of random characters, *ReturnRand()* that I can call to return two integers so I can set a different random speed to a droplet once it has reached the end, *BottomReachedFunction()* that that starts removing characters from the tail end of the droplet and once all are removed it populates the vector with new characters, *Init()* that removes the cursor and then populates a vector of objects with my Rain droplets, finally we have the *Print()* function that prints out the vetors of characters from my droplets.
+The key functions here are the *GoToXY()* which allows me to go to a certain X and Y coordinate on the screen to print a character in that exact position *SetSpeed()* function finds how many objects are being initialized for the current window size and sets the appropriate speed, *GenerateRandomChars()* that uses a rand() function to generate a vector of random characters, *ReturnRand()* that I can call to return two integers so I can set a different random speed to a droplet once it has reached the end, *BottomReachedFunction()* that that starts removing characters from the tail end of the droplet and once all are removed it populates the vector with new characters, *Init()* that removes the cursor and then populates a vector of objects with my Rain droplets, finally we have the *Print()* function that prints out the vectors of characters from my droplets.
 
 
 **DigitalRain.h**
@@ -92,17 +92,9 @@ Going back to the beginning of the function where I check if the Y position is n
 <img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/ReturnRand.png" width="650" height="600">
 [img 1.7]
 
-<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/Init.jpeg" width="650" height="400">
-[img 1.1]
+## Conclusion
 
-
-
-
-
-
-
-
-Hyperlinks look like this [GitHub Help](https://help.github.com/).
+Overall the project came out very well. I managed to recreate the original digital rain from 'The Matrix'. I was initially planning to use Japanese characters just like in the movie, but my priority was to get the basic functionality working. I did try to Implement the Japanese characters but that proved to be more difficult and I decided not to spend my time on it and focused on other aspects, such as the screen re-size option. The screen re-size option could have been implemented better as the screen size can only be adjusted once at the beginning, and any other adjustments after that will break the simulation and continuously checking the screen size caused the simulation to lag and lose its look. 
 
 #References
 
