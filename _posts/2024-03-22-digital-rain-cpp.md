@@ -49,21 +49,38 @@ The key functions here are the *GoToXY()* which allows me to go to a certain X a
 
 In this file, I provide all my public function definitions and private variables
 
-<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/tree/main/docs/assets/images/Header.png" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Header.png" width="450" height="400">
 [img 1.2]
 
-raw.githubusercontent.com
+In my *private* section I define all the variables that my object holds. These are the vector of characters, a vector of speeds, my *arrP* that holds a value that represents the character position within the *chars* vector, 'x' and 'y' which are the coordinates for the *GoToXY() function, *speed* which is the current speed of the droplet, and *vectorPos* which is just the position of my object within the vector of objects created in *main.cpp* 
 
 
 ## Design And Implementation
 
-In the main.cpp file I initialize my Rain object (Rain rain;) that holds all the attributes for my droplet, then I initialize a vector of Rain objects called raindrops (std::vector<Rain> raindrops;), creating my droplets. After that, I have an infinite loop that iterates through my raindrops and prints them on the screen.
+In the main.cpp file I initialize my Rain object (Rain rain;) that holds all the attributes for my droplet, then I initialize a vector of rain objects called raindrops (std::vector<Rain> raindrops;), creating my droplets. After that, I have an infinite loop that iterates through my raindrops and prints them on the screen.
 
 <img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/main.png" width="450" height="400">
 [img 1.3]
 
- I followed my *OriginalAlgorithm* design by printing each character to the console window
+Let's move to the *Init()* function:
+
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Init.png" width="450" height="400">
+[img 1.4]
+
+The main purpose of this function is to remove the cursor, get the screen size, and populate the raindrops variables. The raindrops are placed in a random 'y' position on the screen for a nice effect. After this is done, the function is never called again and the *Print()* function does most of the work here.
+
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Print.png" width="450" height="400">
+[img 1.5]
+
+
+
+
+
 At first, I designed my algorithm to have a delay in my *main.cpp* file because my droplets were falling too fast. This worked initially but when I started adding more droplets I noticed that this would not work. I was technically adding a blocking function to my code that was stopping code from executing, I proceeded to add a delay in my *Print()* function to see what effect it would have. The conclusion was that each one of the droplets would delay all the droplets printed before it, so I needed a solution that could not block any of my code from executing and that solution was to basically "skip" the printing function for a certain number of times for each object to get the desired effect of the droplets having different speeds.
+
+
+
+
 
 
 
