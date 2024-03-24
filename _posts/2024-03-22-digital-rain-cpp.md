@@ -24,6 +24,7 @@ It's a very simple algorithm and I based the whole project on that simple idea.
 *note: the GoToXY() function simply goes to a position on the screen given the X and Y coordinate*
 
 <img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/OriginalAlgorithm.jpg" width="450" height="400">
+[img 1.1]
 
 ## Project Overview
 
@@ -40,20 +41,25 @@ In my main.cpp file I initialize a vector of droplets and put them in an infinit
 
 **DigitalRain.cpp**
 
-This is the file where all the magic happens. Here I initialize my default Rain object along with any setters, and my custom functions. 
+This is the file where all the magic happens. Here I initialize my default Rain object along with any setters, and my custom functions.
+The key functions here are the *GoToXY()* which allows me to go to a certain X and Y coordinate on the screen to print a character in that exact position *SetSpeed()* function that finds how many objects are being initialized for the current window size and sets the appropriate speed, *GenerateRandomChars()* that uses a rand() function to generate a vector of random characters, *ReturnRand()* that I can call to return two integers so I can set a different random speed to a droplet once it has reached the end, *BottomReachedFunction()* that that starts removing characters from the tail end of the droplet and once all are removed it populates the vector with new characters, *Init()* that removes the cursor and then populates a vector of objects with my Rain droplets, finally we have the *Print()* function that prints out the vetors of characters from my droplets.
 
 
 **DigitalRain.h**
 
-In this file I provide all my public function definitions, and private variables
+In this file, I provide all my public function definitions and private variables
+
+**Insert header file here**
 
 
-To give an overview of how my code works without diving into too much detail... Each one of my Rain objects hold a vector of characters, same as can be seen in The Original Algorithm described at the start of the Blog. Keep in mind that the cursor on the concole window 
+## Design And Implementation
+
+When printing to the console window it typically moves from left to right and when it reaches the end it moves down a position and continues left to right, which would mean that all my droplets would be falling from the same postions at the same speeds. By using the GoToXY() function I can print the characters in different positions to make it look more realistic. 
 
 
 
 
-**Place this in Implementation Details**In the main.cpp file I initialize my Rain object (Rain rain;) that holds all the attributes for my droplet, then I initialize a vector of Rain objects called raindrops (std::vector<Rain> raindrops;), creating my droplets. After that I have an infinite loop that iterates through my raindrops and prints them on the screen.
+**Place this in Implementation Details**In the main.cpp file I initialize my Rain object (Rain rain;) that holds all the attributes for my droplet, then I initialize a vector of Rain objects called raindrops (std::vector<Rain> raindrops;), creating my droplets. After that, I have an infinite loop that iterates through my raindrops and prints them on the screen.
 
 
 
