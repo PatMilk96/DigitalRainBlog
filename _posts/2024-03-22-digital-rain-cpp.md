@@ -49,18 +49,23 @@ The key functions here are the *GoToXY()* which allows me to go to a certain X a
 
 In this file, I provide all my public function definitions and private variables
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/tree/main/docs/assets/images/Header.png" width="450" height="400">
+<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/tree/main/docs/assets/images/Header.png" width="450" height="400">
 [img 1.2]
+
+raw.githubusercontent.com
 
 
 ## Design And Implementation
 
-When printing to the console window it typically moves from left to right and when it reaches the end it moves down a position and continues left to right, which would mean that all my droplets would be falling from the same postions at the same speeds. By using the GoToXY() function I can print the characters in different positions to make it look more realistic. 
+In the main.cpp file I initialize my Rain object (Rain rain;) that holds all the attributes for my droplet, then I initialize a vector of Rain objects called raindrops (std::vector<Rain> raindrops;), creating my droplets. After that, I have an infinite loop that iterates through my raindrops and prints them on the screen.
+
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/main.png" width="450" height="400">
+[img 1.3]
+
+ I followed my *OriginalAlgorithm* design by printing each character to the console window
+At first, I designed my algorithm to have a delay in my *main.cpp* file because my droplets were falling too fast. This worked initially but when I started adding more droplets I noticed that this would not work. I was technically adding a blocking function to my code that was stopping code from executing, I proceeded to add a delay in my *Print()* function to see what effect it would have. The conclusion was that each one of the droplets would delay all the droplets printed before it, so I needed a solution that could not block any of my code from executing and that solution was to basically "skip" the printing function for a certain number of times for each object to get the desired effect of the droplets having different speeds.
 
 
-
-
-**Place this in Implementation Details**In the main.cpp file I initialize my Rain object (Rain rain;) that holds all the attributes for my droplet, then I initialize a vector of Rain objects called raindrops (std::vector<Rain> raindrops;), creating my droplets. After that, I have an infinite loop that iterates through my raindrops and prints them on the screen.
 
 
 
