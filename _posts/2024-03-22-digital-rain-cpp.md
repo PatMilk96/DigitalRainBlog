@@ -78,7 +78,7 @@ the first *if* statement checks if all characters have been printed, and if they
 
 Then we have the main *if* *else* statement. First I check if the Y position is not the same as the bottom of the screen, if it is then I check the speed. If the speed is equal to zero then I can call my *BottomReached()* function [img 1.6] and start removing the tail end of the droplet by printing an empty character in its place and using pop to remove the characters from the vector and if they're all removed I populate the vector with random characters, if it's not zero then decrement it and move to the next droplet. After the *BottomReached()* function is called I set the speed back to the original speed. Then I check if the size is 1 and if it is then I set a random speed and place it in the *SpeedsCopy* vector. The *ReturnRand* function is used here [img 1.7]. This function was created with the help of ChatGPT.  It is a calculation that returns two random values based on the amount of objects on the screen. The amount of object is the same as half the size of the screen. ChatGPT was given the numbers for the biggest screen The max value is x = 156  (y=150 : z=50) and min screen x = 6 (y=1500 : z=1000) and was asked to provide a calculation for 'y' and 'z' given the input 'x' while satisfying the min and max values.
 
-Going back to the beginning of the function where I check if the Y position is not the same as the bottom of the screen (height). When it's not, then I can continue to print the characters. It's that classic upgraded *OriginalAlgorith* here... Go to X, Y, print a character, remove the tail end, increment the Y, increment the vector of characters position and reset the speed. If the speed is greater than 0 then decrement it.
+Going back to the beginning of the function where I check if the Y position is not the same as the bottom of the screen (height). When it's not, then I can continue to print the characters. It's that classic upgraded *OriginalAlgorith* here... Go to X, Y, print a character, remove the tail end, increment the Y, increment the vector of characters position, and reset the speed. If the speed is greater than 0 then decrement it.
 
 
 <img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/BottomReached.png" width="650" height="600">
@@ -88,8 +88,10 @@ Going back to the beginning of the function where I check if the Y position is n
 <img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/ReturnRand.png" width="650" height="600">
 [img 1.7]
 
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Init.jpeg" width="650" height="400">
+[img 1.1]
 
-
+<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/DigitalRain.gif" width="100" height="100">
 
 
 
