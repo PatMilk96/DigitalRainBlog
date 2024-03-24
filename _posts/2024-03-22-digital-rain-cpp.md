@@ -23,7 +23,7 @@ It's a very simple algorithm and I based the whole project on that simple idea.
 
 *note: the GoToXY() function simply goes to a position on the screen given the X and Y coordinate*
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/OriginalAlgorithm.jpg" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/OriginalAlgorithm.jpg" width="650" height="400">
 [img 1.1]
 
 ## Project Overview
@@ -49,7 +49,7 @@ The key functions here are the *GoToXY()* which allows me to go to a certain X a
 
 In this file, I provide all my public function definitions and private variables
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Header.png" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Header.png" width="650" height="600">
 [img 1.2]
 
 In my *private* section I define all the variables that my object holds. These are the vector of characters, a vector of speeds, my *arrP* that holds a value that represents the character position within the *chars* vector, 'x' and 'y' which are the coordinates for the *GoToXY() function, *speed* which is the current speed of the droplet (this is how many times I will "skip" the print function), and *vectorPos* which is just the position of my object within the vector of objects created in *main.cpp* 
@@ -59,17 +59,17 @@ In my *private* section I define all the variables that my object holds. These a
 
 In the main.cpp file I initialize my Rain object (Rain rain;) that holds all the attributes for my droplet, then I initialize a vector of rain objects called raindrops (std::vector<Rain> raindrops;), creating my droplets. After that, I have an infinite loop that iterates through my raindrops and prints them on the screen.
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/main.png" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/main.png" width="650" height="600">
 [img 1.3]
 
 Let's move to the *Init()* function:
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Init.png" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Init.png" width="650" height="600">
 [img 1.4]
 
 The main purpose of this function is to remove the cursor, get the screen size, and populate the raindrops variables. The raindrops are placed in a random 'y' position on the screen for a nice effect. After this is done, the function is never called again and the *Print()* function does most of the work here.
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Print.png" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/Print.png" width="650" height="600">
 [img 1.5]
 
 The *Print()* function follows the same pattern as the *OriginalAlgorith*
@@ -78,14 +78,14 @@ the first *if* statement checks if all characters have been printed, and if they
 
 Then we have the main *if* *else* statement. First I check if the Y position is not the same as the bottom of the screen, if it is then I check the speed. If the speed is equal to zero then I can call my *BottomReached()* function [img 1.6] and start removing the tail end of the droplet by printing an empty character in its place and using pop to remove the characters from the vector and if they're all removed I populate the vector with random characters, if it's not zero then decrement it and move to the next droplet. After the *BottomReached()* function is called I set the speed back to the original speed. Then I check if the size is 1 and if it is then I set a random speed and place it in the *SpeedsCopy* vector. The *ReturnRand* function is used here [img 1.7]. This function was created with the help of ChatGPT.  It is a calculation that returns two random values based on the amount of objects on the screen. The amount of object is the same as half the size of the screen. ChatGPT was given the numbers for the biggest screen The max value is x = 156  (y=150 : z=50) and min screen x = 6 (y=1500 : z=1000) and was asked to provide a calculation for 'y' and 'z' given the input 'x' while satisfying the min and max values.
 
-Going back to the beginning of the function where I check if the Y position is not the same as the bottom of the screen. In the the case, it is not, then I can continue to print the characters. It's that classic upgraded *OriginalAlgorith* here... Go to X, Y, print a character, remove the tail end, increment the Y, increment the vector of characters position and reset the speed. If the speed is greater than 0 then decrement it.
+Going back to the beginning of the function where I check if the Y position is not the same as the bottom of the screen (height). When it's not, then I can continue to print the characters. It's that classic upgraded *OriginalAlgorith* here... Go to X, Y, print a character, remove the tail end, increment the Y, increment the vector of characters position and reset the speed. If the speed is greater than 0 then decrement it.
 
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/BottomReached.png" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/BottomReached.png" width="650" height="600">
 [img 1.6]
 
 
-<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/BottomReached.png" width="450" height="400">
+<img src="https://github.com/PatMilk96/DigitalRainBlog/blob/main/docs/assets/images/ReturnRand.png" width="650" height="600">
 [img 1.7]
 
 
@@ -95,18 +95,13 @@ Going back to the beginning of the function where I check if the Y position is n
 
 
 
-Font can be *Italic* or **Bold**.
 
-Code can be highlighted with `backticks`.
+
 
 Hyperlinks look like this [GitHub Help](https://help.github.com/).
 
-A bullet list:
+#References
 
-- vectors
-- algorithms
-- iterators
-
-You can add an image that has been uploaded to the repository in a /docs/assets/images folder.
+[Console Window Size](https://learn.microsoft.com/en-us/archive/msdn-technet-forums/0de248af-3497-4537-bb41-6d129b04fb27).
 
 
