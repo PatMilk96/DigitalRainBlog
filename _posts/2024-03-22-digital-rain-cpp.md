@@ -10,7 +10,7 @@ https://github.com/PatMilk96/Digital_Rain-Patryk-Milkiewicz-
 All coded in VisualStudio 2022
 
 
-<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/DigitalRain2.gif" width="800" height="650">
+<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/DigitalRain2.gif" width="1000" height="650">
 
 
 ## Introduction
