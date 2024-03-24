@@ -10,6 +10,9 @@ https://github.com/PatMilk96/Digital_Rain-Patryk-Milkiewicz-
 All coded in VisualStudio 2022
 
 
+<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/DigitalRain.gif" width="600" height="600">
+
+
 ## Introduction
 
 So, what is Digital rain? If you've watched The Matrix then you know what I'm talking about. It's the icon green rain of Japanese characters falling down the screen, and if you're a big fan of the movie there is a chance you got some good sushi recipes out of it!
@@ -91,8 +94,6 @@ Going back to the beginning of the function where I check if the Y position is n
 
 <img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/Init.jpeg" width="650" height="400">
 [img 1.1]
-
-<img src="https://raw.githubusercontent.com/PatMilk96/DigitalRainBlog/main/docs/assets/images/DigitalRain.gif" width="600" height="600">
 
 
 
