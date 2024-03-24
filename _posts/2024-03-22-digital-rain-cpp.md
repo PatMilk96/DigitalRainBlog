@@ -49,7 +49,8 @@ The key functions here are the *GoToXY()* which allows me to go to a certain X a
 
 In this file, I provide all my public function definitions and private variables
 
-**Insert header file here**
+<img src="https://github.com/PatMilk96/DigitalRainBlog/tree/main/docs/assets/images/Header.png" width="450" height="400">
+[img 1.2]
 
 
 ## Design And Implementation
